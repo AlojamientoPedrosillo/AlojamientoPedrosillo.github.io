@@ -55,7 +55,25 @@ p{margin-top:0}
 .split-heading{display:flex;align-items:end;justify-content:space-between;gap:30px;max-width:none}
 .services{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .services article{background:var(--surface);padding:28px;border-radius:18px;border:1px solid var(--line)}
-.service-icon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:white;font-family:"Cormorant Garamond",serif;font-size:1.35rem}
+.service-icon{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:transparent;
+  border:1px solid rgba(85,107,93,.35);
+  color:var(--green);
+}
+.service-icon svg{
+  width:24px;
+  height:24px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.5;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
 .services p{color:#6b706d;font-size:.92rem;margin-bottom:0}
 .note{font-weight:700;margin-top:24px}
 .text-button{background:none;border:0;padding:0;color:var(--green);font-weight:700;cursor:pointer}
