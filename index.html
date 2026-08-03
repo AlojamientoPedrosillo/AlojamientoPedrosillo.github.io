@@ -131,21 +131,48 @@
       <div>
         <p class="eyebrow light">Disponibilidad</p>
         <h2>Consulta tus fechas</h2>
-        <p>El precio varía según la temporada y las fechas elegidas. Envíanos una solicitud y te responderemos con disponibilidad y presupuesto, sin compromiso.</p>
+        <p>El calendario se actualiza automáticamente a partir de la disponibilidad sincronizada de Airbnb y Booking. Los días marcados como ocupados no están disponibles.</p>
+        <div class="calendar-legend" aria-label="Leyenda del calendario">
+          <span><i class="legend-dot available-dot"></i> Disponible</span>
+          <span><i class="legend-dot occupied-dot"></i> Ocupado</span>
+        </div>
+        <p class="calendar-note">La disponibilidad es orientativa hasta que confirmemos personalmente la reserva.</p>
       </div>
 
       <div class="calendar-card">
-        <span>Calendario</span>
-        <h3>Sincronización próximamente</h3>
-        <p>Añadiremos aquí la disponibilidad sincronizada con Booking y Airbnb.</p>
+        <div class="calendar-toolbar">
+          <button id="calendar-prev" type="button" aria-label="Mes anterior">‹</button>
+          <h3 id="calendar-title">Calendario</h3>
+          <button id="calendar-next" type="button" aria-label="Mes siguiente">›</button>
+        </div>
+        <div class="calendar-weekdays" aria-hidden="true">
+          <span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span>
+        </div>
+        <div id="availability-calendar" class="availability-calendar" aria-live="polite"></div>
+        <p id="calendar-status" class="calendar-status">Cargando disponibilidad…</p>
       </div>
     </section>
 
     <section class="section booking reveal" id="reserva">
       <div class="booking-copy">
         <p class="eyebrow">Reserva directa</p>
-        <h2>Consulta disponibilidad sin comisiones de plataforma</h2>
-        <p>Completa los datos y se abrirá un correo preparado con tu solicitud. La reserva no se considerará confirmada hasta que recibas nuestra respuesta.</p>
+        <h2>Reserva directamente y consigue el mejor precio</h2>
+        <p class="booking-lead"><strong>Al reservar directamente no se incluyen las comisiones de Booking o Airbnb.</strong> Te responderemos personalmente con la disponibilidad y el mejor precio para tus fechas.</p>
+
+        <div class="direct-advantages">
+          <article>
+            <span>✓</span>
+            <div><strong>Mejor precio disponible</strong><p>Sin las comisiones añadidas por las plataformas.</p></div>
+          </article>
+          <article>
+            <span>✓</span>
+            <div><strong>Atención directa</strong><p>Hablarás directamente con nosotros, sin intermediarios.</p></div>
+          </article>
+          <article>
+            <span>✓</span>
+            <div><strong>Confirmación personal</strong><p>Revisamos tus fechas antes de confirmar la reserva.</p></div>
+          </article>
+        </div>
 
         <div class="platforms">
           <a href="https://www.booking.com/hotel/es/pedrosillo.es.html" target="_blank" rel="noopener">Ver en Booking</a>
@@ -154,6 +181,10 @@
       </div>
 
       <form id="booking-form" class="booking-form">
+        <div class="form-heading">
+          <span>Solicitud sin compromiso</span>
+          <h3>Consulta disponibilidad</h3>
+        </div>
         <label>Nombre y apellidos<input type="text" id="name" required></label>
         <div class="form-row">
           <label>Entrada<input type="date" id="checkin" required></label>
@@ -169,8 +200,9 @@
         </label>
         <label>Teléfono<input type="tel" id="guestphone"></label>
         <label>Mensaje<textarea id="message" rows="4" placeholder="Cuéntanos cualquier detalle que debamos saber"></textarea></label>
-        <button class="btn btn-primary full" type="submit">Enviar solicitud por correo</button>
+        <button class="btn btn-primary full" type="submit">Solicitar disponibilidad</button>
         <a class="btn btn-whatsapp full" href="https://wa.me/34661117740?text=Hola%2C%20quiero%20consultar%20la%20disponibilidad%20del%20Apartamento%20Rural%20Pedrosillo." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+        <p class="form-disclaimer">La solicitud no confirma automáticamente la reserva.</p>
       </form>
     </section>
 

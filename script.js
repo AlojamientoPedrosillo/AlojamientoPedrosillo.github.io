@@ -122,3 +122,110 @@ document.addEventListener('keydown', event => {
   if (event.key === 'ArrowLeft') showImage(currentIndex - 1);
   if (event.key === 'ArrowRight') showImage(currentIndex + 1);
 });
+
+
+/* Calendario sincronizado mediante availability.json */
+const calendarElement = document.getElementById('availability-calendar');
+const calendarTitle = document.getElementById('calendar-title');
+const calendarStatus = document.getElementById('calendar-status');
+const calendarPrev = document.getElementById('calendar-prev');
+const calendarNext = document.getElementById('calendar-next');
+
+let occupiedDates = new Set();
+let calendarMonth = new Date();
+calendarMonth = new Date(calendarMonth.getFullYear(), calendarMonth.getMonth(), 1);
+
+function localDateKey(date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+function renderAvailabilityCalendar() {
+  if (!calendarElement) return;
+
+  const year = calendarMonth.getFullYear();
+  const month = calendarMonth.getMonth();
+  const firstDay = new Date(year, month, 1);
+  const lastDay = new Date(year, month + 1, 0);
+  const mondayOffset = (firstDay.getDay() + 6) % 7;
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  calendarTitle.textContent = new Intl.DateTimeFormat('es-ES', {
+    month: 'long',
+    year: 'numeric'
+  }).format(firstDay);
+
+  calendarElement.innerHTML = '';
+
+  for (let i = 0; i < mondayOffset; i += 1) {
+    const empty = document.createElement('span');
+    empty.className = 'calendar-day empty';
+    calendarElement.appendChild(empty);
+  }
+
+  for (let day = 1; day <= lastDay.getDate(); day += 1) {
+    const date = new Date(year, month, day);
+    const key = localDateKey(date);
+    const cell = document.createElement('span');
+    cell.className = 'calendar-day';
+    cell.textContent = String(day);
+    cell.setAttribute('aria-label', `${day} de ${calendarTitle.textContent}`);
+
+    if (date < today) cell.classList.add('past');
+    if (date.getTime() === today.getTime()) cell.classList.add('today');
+
+    if (occupiedDates.has(key)) {
+      cell.classList.add('occupied');
+      cell.setAttribute('aria-label', `${cell.getAttribute('aria-label')}, ocupado`);
+      cell.title = 'Ocupado';
+    } else {
+      cell.title = 'Disponible';
+    }
+
+    calendarElement.appendChild(cell);
+  }
+}
+
+async function loadAvailability() {
+  if (!calendarElement) return;
+
+  try {
+    const response = await fetch(`availability.json?v=${Date.now()}`, { cache: 'no-store' });
+    if (!response.ok) throw new Error('No se pudo cargar la disponibilidad');
+
+    const data = await response.json();
+    occupiedDates = new Set(Array.isArray(data.occupied_dates) ? data.occupied_dates : []);
+    renderAvailabilityCalendar();
+
+    if (data.updated_at) {
+      const updated = new Date(data.updated_at);
+      calendarStatus.textContent = `Actualizado: ${new Intl.DateTimeFormat('es-ES', {
+        dateStyle: 'medium',
+        timeStyle: 'short'
+      }).format(updated)}`;
+    } else {
+      calendarStatus.textContent = 'Disponibilidad pendiente de la primera sincronización.';
+    }
+  } catch (error) {
+    renderAvailabilityCalendar();
+    calendarStatus.textContent = 'No se ha podido actualizar el calendario. Consulta las fechas mediante el formulario.';
+    calendarStatus.classList.add('error');
+  }
+}
+
+if (calendarPrev && calendarNext) {
+  calendarPrev.addEventListener('click', () => {
+    calendarMonth = new Date(calendarMonth.getFullYear(), calendarMonth.getMonth() - 1, 1);
+    renderAvailabilityCalendar();
+  });
+
+  calendarNext.addEventListener('click', () => {
+    calendarMonth = new Date(calendarMonth.getFullYear(), calendarMonth.getMonth() + 1, 1);
+    renderAvailabilityCalendar();
+  });
+}
+
+loadAvailability();

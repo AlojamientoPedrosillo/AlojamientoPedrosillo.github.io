@@ -132,3 +132,45 @@ footer p{margin:5px 0 0;opacity:.75}
   .gallery-modal{padding:55px 16px}
   .gallery-arrow{font-size:3rem}.gallery-prev{left:8px}.gallery-next{right:8px}
 }
+
+
+/* Calendario de disponibilidad */
+.calendar-legend{display:flex;flex-wrap:wrap;gap:22px;margin:26px 0 12px;font-size:.9rem;font-weight:600}
+.calendar-legend span{display:flex;align-items:center;gap:8px}
+.legend-dot{width:12px;height:12px;border-radius:50%;display:inline-block}
+.available-dot{background:#fff;border:1px solid rgba(255,255,255,.7)}
+.occupied-dot{background:#bdc4bf}
+.calendar-note{font-size:.82rem;opacity:.82}
+.calendar-card{padding:30px}
+.calendar-toolbar{display:grid;grid-template-columns:42px 1fr 42px;align-items:center;gap:10px;margin-bottom:18px}
+.calendar-toolbar h3{text-align:center;margin:0;font-size:1.75rem}
+.calendar-toolbar button{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--green);font-size:1.8rem;line-height:1;cursor:pointer}
+.calendar-weekdays,.availability-calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.calendar-weekdays{margin-bottom:7px}
+.calendar-weekdays span{text-align:center;font-size:.72rem;font-weight:700;color:#7a817c}
+.calendar-day{aspect-ratio:1;display:grid;place-items:center;border-radius:9px;background:#f7f8f6;border:1px solid transparent;font-size:.88rem}
+.calendar-day.empty{background:transparent}
+.calendar-day.today{border-color:var(--green);font-weight:700}
+.calendar-day.occupied{background:#cfd4d0;color:#626964;text-decoration:line-through}
+.calendar-day.past{opacity:.38}
+.calendar-status{text-align:center;margin:15px 0 0;font-size:.78rem;color:#747b76}
+.calendar-status.error{color:#8a514b}
+
+/* Reserva directa */
+.booking-lead{font-size:1.05rem}
+.booking-lead strong{color:var(--green-dark)}
+.direct-advantages{display:grid;gap:14px;margin:28px 0}
+.direct-advantages article{display:flex;gap:13px;align-items:flex-start}
+.direct-advantages article>span{flex:0 0 28px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#fff;font-weight:700}
+.direct-advantages strong{display:block;color:var(--title)}
+.direct-advantages p{margin:2px 0 0;font-size:.88rem;color:#707672}
+.form-heading{margin-bottom:22px}
+.form-heading span{text-transform:uppercase;letter-spacing:.16em;font-size:.7rem;color:var(--green);font-weight:700}
+.form-heading h3{margin:.15em 0 0;font-size:2rem}
+.form-disclaimer{text-align:center;margin:12px 0 0;font-size:.76rem;color:#777d79}
+
+@media(max-width:600px){
+  .calendar-card{padding:20px 14px}
+  .calendar-day{font-size:.8rem;border-radius:7px}
+  .calendar-weekdays,.availability-calendar{gap:4px}
+}
