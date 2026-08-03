@@ -415,3 +415,154 @@ iframe,img,svg{max-width:100%}
     font-size:1.25rem;
   }
 }
+
+
+/* V5: pulido móvil, reserva directa y mapa */
+.services article,
+.direct-advantages article,
+.booking-form,
+.calendar-card{
+  transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+
+.services article:hover,
+.booking-form:hover,
+.calendar-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 42px rgba(38,42,39,.10);
+}
+
+.btn{
+  transition:transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+.btn:active{
+  transform:scale(.985);
+}
+
+input,select,textarea{
+  transition:border-color .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+input:focus,select:focus,textarea:focus{
+  outline:none;
+  border-color:rgba(85,107,93,.72);
+  box-shadow:0 0 0 4px rgba(85,107,93,.11);
+  background:#fff;
+}
+
+.calendar-toolbar button{
+  transition:transform .2s ease, background-color .2s ease, border-color .2s ease;
+}
+.calendar-toolbar button:hover{
+  transform:scale(1.06);
+  background:#f1f4f1;
+  border-color:rgba(85,107,93,.36);
+}
+.calendar-day{
+  transition:transform .18s ease, background-color .18s ease;
+}
+.calendar-day:not(.empty):hover{
+  transform:translateY(-1px);
+}
+.calendar-day.occupied{
+  background:#b9c0bb;
+  color:#4f5651;
+}
+
+.direct-advantages article:nth-child(1){transition-delay:.04s}
+.direct-advantages article:nth-child(2){transition-delay:.09s}
+.direct-advantages article:nth-child(3){transition-delay:.14s}
+
+@media(max-width:600px){
+  .services article{
+    padding:17px 18px;
+    display:grid;
+    grid-template-columns:48px minmax(0,1fr);
+    column-gap:14px;
+    align-items:center;
+  }
+  .services article .service-icon{
+    grid-row:1/3;
+  }
+  .services article h3{
+    margin:0 0 2px;
+    font-size:1.32rem;
+  }
+  .services article p{
+    margin:0;
+    line-height:1.45;
+    font-size:.84rem;
+  }
+  .service-icon{
+    width:44px;
+    height:44px;
+  }
+  .service-icon svg{
+    width:23px;
+    height:23px;
+  }
+
+  .calendar-toolbar button{
+    font-size:1.65rem;
+    background:#f7f8f6;
+  }
+  .calendar-day.occupied{
+    background:#afb7b1;
+    color:#454b47;
+  }
+
+  .booking-lead{
+    font-size:1.02rem;
+    line-height:1.65;
+  }
+  .booking-lead strong{
+    display:block;
+    margin-bottom:7px;
+    font-size:1.12rem;
+  }
+  .direct-advantages{
+    gap:12px;
+    margin-top:24px;
+  }
+  .direct-advantages article{
+    padding:13px;
+    border:1px solid var(--line);
+    border-radius:13px;
+    background:rgba(255,255,255,.65);
+  }
+  .direct-advantages article>span{
+    flex-basis:30px;
+    width:30px;
+    height:30px;
+  }
+  .direct-advantages strong{
+    font-size:.96rem;
+  }
+
+  .booking-form{
+    padding:23px 17px;
+  }
+  input,select,textarea{
+    min-height:50px;
+    border-radius:13px;
+    padding:13px 14px;
+  }
+  textarea{
+    min-height:115px;
+  }
+  .booking-form .btn{
+    min-height:51px;
+  }
+
+  .location iframe{
+    min-height:340px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    scroll-behavior:auto!important;
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+  }
+}
