@@ -28,7 +28,7 @@
     <div class="hero-shade"></div>
 
     <div class="hero-actions">
-      <a class="btn btn-primary" href="#reserva">Reserva directa</a>
+      <a class="btn btn-primary" href="#reserva">Consultar disponibilidad</a>
       <a class="btn btn-ghost" href="#galeria">Ver fotografías</a>
     </div>
 
@@ -62,22 +62,30 @@
 
       <div class="services">
         <article>
-          <span class="service-icon">P</span>
+          <span class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 16V8.8A2.8 2.8 0 0 1 7.8 6h8.4A2.8 2.8 0 0 1 19 8.8V16M4 16h16M7 16v2M17 16v2M8 11h8M8.5 8.5h7"/></svg>
+          </span>
           <h3>Parking privado</h3>
           <p>Aparcamiento gratuito para los huéspedes.</p>
         </article>
         <article>
-          <span class="service-icon">A</span>
+          <span class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M7 20h10V4H7zM10 8l2-2 2 2M10 16l2 2 2-2"/></svg>
+          </span>
           <h3>Ascensor</h3>
           <p>Acceso cómodo al apartamento.</p>
         </article>
         <article>
-          <span class="service-icon">L</span>
+          <span class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="5"/><path d="M5 3h14v18H5zM8 6h.01M11 6h.01M14 6h2"/></svg>
+          </span>
           <h3>Lavadora</h3>
           <p>Disponible dentro del alojamiento.</p>
         </article>
         <article>
-          <span class="service-icon">C</span>
+          <span class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M8 19h8M10 16h4M12 3v10M9 6c0 1.4 1.2 2.2 3 2.2S15 7.4 15 6"/></svg>
+          </span>
           <h3>Calefacción</h3>
           <p>Confort durante todo el año.</p>
         </article>
@@ -120,10 +128,15 @@
       </div>
     </section>
 
+
+    <section class="direct-benefits reveal" aria-label="Ventajas de la reserva directa">
+      <p><strong>Reserva directa</strong> · Trato personal · Sin comisiones de plataforma · Confirmación individual de las fechas</p>
+    </section>
+
     <section class="section booking reveal" id="reserva">
       <div class="booking-copy">
         <p class="eyebrow">Reserva directa</p>
-        <h2>Consulta disponibilidad sin comisiones de plataforma</h2>
+        <h2>Consulta tus fechas directamente con nosotros</h2>
         <p>Completa los datos y se abrirá un correo preparado con tu solicitud. La reserva no se considerará confirmada hasta que recibas nuestra respuesta.</p>
 
         <div class="platforms">
@@ -148,7 +161,7 @@
         </label>
         <label>Teléfono<input type="tel" id="guestphone"></label>
         <label>Mensaje<textarea id="message" rows="4" placeholder="Cuéntanos cualquier detalle que debamos saber"></textarea></label>
-        <button class="btn btn-primary full" type="submit">Enviar solicitud por correo</button>
+        <button class="btn btn-primary full" type="submit">Solicitar disponibilidad</button>
         <a class="btn btn-whatsapp full" href="https://wa.me/34661117740?text=Hola%2C%20quiero%20consultar%20la%20disponibilidad%20del%20Apartamento%20Rural%20Pedrosillo." target="_blank" rel="noopener">Consultar por WhatsApp</a>
       </form>
     </section>
@@ -166,16 +179,33 @@
   </main>
 
   <footer>
-    <div>
+    <div class="footer-brand">
+      <div class="footer-mountain" aria-hidden="true">
+        <svg viewBox="0 0 180 48"><path d="M2 38c20-2 28-12 39-15 10-3 18 4 29 1 13-4 18-19 31-20 14-2 24 17 38 20 11 3 20-4 39-1"/></svg>
+      </div>
       <strong>PEDROSILLO</strong>
       <p>Apartamento rural · Selaya, Cantabria</p>
     </div>
-    <div>
+
+    <div class="footer-contact">
+      <span>Contacto</span>
       <a href="tel:+34661117740">661 117 740</a>
       <a href="mailto:linares10santander@gmail.com">linares10santander@gmail.com</a>
     </div>
-    <p>© <span id="year"></span> Apartamento Rural Pedrosillo</p>
+
+    <div class="footer-links">
+      <span>Enlaces</span>
+      <a href="#alojamiento">Alojamiento</a>
+      <a href="#galeria">Galería</a>
+      <a href="#reserva">Disponibilidad</a>
+    </div>
+
+    <p class="footer-copy">© <span id="year"></span> Apartamento Rural Pedrosillo</p>
   </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/34661117740?text=Hola%2C%20quiero%20consultar%20la%20disponibilidad%20del%20Apartamento%20Rural%20Pedrosillo." target="_blank" rel="noopener" aria-label="Consultar disponibilidad por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.7a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.4-4.9a8.4 8.4 0 1 1 16.1-3.9ZM8.2 7.7c-.2-.4-.4-.4-.7-.4h-.5c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.7 4.2 3.6 2.1.8 2.6.6 3 .6.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.1.1-1.2-.1-.2-.3-.2-.7-.4l-1.8-.9c-.3-.1-.5-.2-.7.2-.2.3-.8.9-.9 1.1-.2.2-.3.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-.8-1.9Z"/></svg>
+  </a>
 
   <div class="gallery-modal" aria-hidden="true">
     <button class="gallery-close" aria-label="Cerrar galería">×</button>
