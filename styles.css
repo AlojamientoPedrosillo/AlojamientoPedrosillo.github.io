@@ -302,3 +302,56 @@ iframe,img,svg{max-width:100%}
   .gallery-prev{left:2px}
   .gallery-next{right:2px}
 }
+
+
+/* V3: ajuste fino de la portada móvil */
+@media(max-width:600px){
+  .nav{
+    min-height:64px;
+    padding:13px 18px;
+    background:rgba(32,35,33,.42);
+    backdrop-filter:blur(5px);
+  }
+  .nav.scrolled{
+    min-height:60px;
+    padding-top:11px;
+    padding-bottom:11px;
+  }
+  .brand{
+    font-size:.98rem;
+    letter-spacing:.17em;
+  }
+  .menu-btn{
+    font-size:1.55rem;
+  }
+
+  .hero{
+    min-height:100svh;
+    background-image:url("images/portada-mobile.jpg?v=3");
+    background-position:center top;
+    background-size:cover;
+  }
+  .hero-shade{
+    background:linear-gradient(
+      180deg,
+      rgba(18,21,19,.03) 0%,
+      rgba(18,21,19,.02) 48%,
+      rgba(18,21,19,.25) 62%,
+      rgba(18,21,19,.76) 100%
+    );
+  }
+
+  .hero-actions{
+    margin-bottom:72px;
+    padding:0 22px;
+    gap:11px;
+  }
+  .hero-actions .btn{
+    min-height:52px;
+    font-size:1rem;
+  }
+  .scroll-cue{
+    bottom:10px;
+    font-size:.66rem;
+  }
+}
