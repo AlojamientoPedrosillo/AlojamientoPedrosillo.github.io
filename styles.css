@@ -355,3 +355,63 @@ iframe,img,svg{max-width:100%}
     font-size:.66rem;
   }
 }
+
+
+/* V4: portada móvil más compacta y equilibrada */
+@media(max-width:600px){
+  .nav{
+    min-height:58px;
+    padding:10px 16px;
+    background:rgba(30,33,31,.30);
+    backdrop-filter:blur(4px);
+  }
+  .nav.scrolled{
+    min-height:56px;
+    padding:9px 16px;
+  }
+  .brand{
+    font-size:.92rem;
+    letter-spacing:.16em;
+  }
+  .menu-btn{
+    font-size:1.42rem;
+    line-height:1;
+  }
+  .nav-links{
+    top:60px;
+  }
+
+  .hero{
+    min-height:88svh;
+    background-image:url("images/portada-mobile.jpg?v=4");
+    background-position:center top;
+    background-size:cover;
+  }
+  .hero-shade{
+    background:linear-gradient(
+      180deg,
+      rgba(18,20,19,.02) 0%,
+      rgba(18,20,19,.02) 54%,
+      rgba(18,20,19,.18) 66%,
+      rgba(18,20,19,.72) 100%
+    );
+  }
+  .hero-actions{
+    margin-bottom:46px;
+    padding:0 18px;
+    gap:9px;
+  }
+  .hero-actions .btn{
+    min-height:48px;
+    font-size:.96rem;
+  }
+  .scroll-cue{
+    bottom:5px;
+  }
+  .scroll-cue span{
+    display:none;
+  }
+  .scroll-cue i{
+    font-size:1.25rem;
+  }
+}
