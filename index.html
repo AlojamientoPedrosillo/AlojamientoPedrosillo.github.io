@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apartamento Rural Pedrosillo | Selaya, Cantabria</title>
+  <meta name="description" content="Apartamento rural para 4 personas en Selaya, en el corazón de los Valles Pasiegos. Dos dormitorios, parking privado, ascensor, lavadora y calefacción.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero" id="inicio">
+    <nav class="nav">
+      <a class="brand" href="#inicio">PEDROSILLO</a>
+      <button class="menu-btn" aria-label="Abrir menú">☰</button>
+      <div class="nav-links">
+        <a href="#alojamiento">Alojamiento</a>
+        <a href="#galeria">Galería</a>
+        <a href="#disponibilidad">Disponibilidad</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a class="nav-cta" href="#reserva">Reservar</a>
+      </div>
+    </nav>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="eyebrow">Selaya · Cantabria</p>
+      <h1>Apartamento Rural Pedrosillo</h1>
+      <p>Tu alojamiento en el corazón de los Valles Pasiegos</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#reserva">Solicitar reserva</a>
+        <a class="btn btn-light" href="#galeria">Ver fotografías</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro section" id="alojamiento">
+      <div>
+        <p class="eyebrow dark">Descansa y desconecta</p>
+        <h2>Un apartamento cómodo para descubrir Cantabria</h2>
+        <p>Situado en Selaya, el Apartamento Rural Pedrosillo ofrece un espacio luminoso y completamente equipado para un máximo de cuatro personas. Es una base ideal para conocer los Valles Pasiegos y disfrutar de unos días de tranquilidad.</p>
+      </div>
+      <div class="facts">
+        <article><strong>4</strong><span>huéspedes</span></article>
+        <article><strong>2</strong><span>dormitorios</span></article>
+        <article><strong>2</strong><span>camas dobles</span></article>
+        <article><strong>1</strong><span>baño</span></article>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="section-heading">
+        <p class="eyebrow dark">Comodidades</p>
+        <h2>Todo lo necesario para tu estancia</h2>
+      </div>
+      <div class="services">
+        <article><span>🚗</span><h3>Parking privado</h3><p>Aparcamiento gratuito para los huéspedes.</p></article>
+        <article><span>🛗</span><h3>Ascensor</h3><p>Acceso cómodo al apartamento.</p></article>
+        <article><span>🧺</span><h3>Lavadora</h3><p>Disponible dentro del alojamiento.</p></article>
+        <article><span>♨️</span><h3>Calefacción</h3><p>Para una estancia agradable todo el año.</p></article>
+      </div>
+      <p class="note">No se admiten mascotas.</p>
+    </section>
+
+    <section class="section" id="galeria">
+      <div class="section-heading">
+        <p class="eyebrow dark">Galería</p>
+        <h2>Conoce el apartamento</h2>
+      </div>
+      <div class="gallery">
+        <button class="gallery-item wide"><img src="images/salon-1.jpg" alt="Salón del Apartamento Rural Pedrosillo" loading="lazy"></button>
+        <button class="gallery-item"><img src="images/comedor.jpg" alt="Comedor del apartamento" loading="lazy"></button>
+        <button class="gallery-item"><img src="images/dormitorio-1.jpg" alt="Primer dormitorio con cama de matrimonio" loading="lazy"></button>
+        <button class="gallery-item"><img src="images/dormitorio-2.jpg" alt="Segundo dormitorio con cama de matrimonio" loading="lazy"></button>
+        <button class="gallery-item wide"><img src="images/cocina-1.jpg" alt="Cocina equipada" loading="lazy"></button>
+        <button class="gallery-item"><img src="images/bano.jpg" alt="Baño con ducha" loading="lazy"></button>
+        <button class="gallery-item"><img src="images/entrada.jpg" alt="Entrada y pasillo" loading="lazy"></button>
+        <button class="gallery-item wide"><img src="images/vistas-1.jpg" alt="Vistas verdes desde el alojamiento" loading="lazy"></button>
+      </div>
+    </section>
+
+    <section class="section availability" id="disponibilidad">
+      <div>
+        <p class="eyebrow">Disponibilidad</p>
+        <h2>Consulta tus fechas</h2>
+        <p>El precio varía según la temporada y las fechas elegidas. Envíanos una solicitud y te responderemos con disponibilidad y presupuesto, sin compromiso.</p>
+      </div>
+      <div class="calendar-placeholder">
+        <span>📅</span>
+        <h3>Calendario próximamente</h3>
+        <p>Añadiremos aquí el calendario sincronizado de disponibilidad.</p>
+      </div>
+    </section>
+
+    <section class="section booking" id="reserva">
+      <div class="booking-copy">
+        <p class="eyebrow dark">Reserva directa</p>
+        <h2>Solicita disponibilidad sin comisiones de plataforma</h2>
+        <p>Completa los datos y se abrirá un correo preparado con tu solicitud. La reserva no quedará confirmada hasta que recibas nuestra respuesta.</p>
+        <div class="platforms">
+          <a href="https://www.booking.com/hotel/es/pedrosillo.es.html" target="_blank" rel="noopener">Ver en Booking</a>
+          <a href="https://www.airbnb.es/rooms/1296326001164384608" target="_blank" rel="noopener">Ver en Airbnb</a>
+        </div>
+      </div>
+      <form id="booking-form" class="booking-form">
+        <label>Nombre y apellidos<input type="text" id="name" required></label>
+        <div class="form-row">
+          <label>Entrada<input type="date" id="checkin" required></label>
+          <label>Salida<input type="date" id="checkout" required></label>
+        </div>
+        <label>Número de huéspedes
+          <select id="guests" required>
+            <option value="1">1 huésped</option>
+            <option value="2" selected>2 huéspedes</option>
+            <option value="3">3 huéspedes</option>
+            <option value="4">4 huéspedes</option>
+          </select>
+        </label>
+        <label>Teléfono<input type="tel" id="guestphone"></label>
+        <label>Mensaje<textarea id="message" rows="4" placeholder="Cuéntanos cualquier detalle que debamos saber"></textarea></label>
+        <button class="btn btn-primary full" type="submit">Enviar solicitud por correo</button>
+        <a class="btn btn-whatsapp full" href="https://wa.me/34661117740?text=Hola%2C%20quiero%20consultar%20la%20disponibilidad%20del%20Apartamento%20Rural%20Pedrosillo." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+      </form>
+    </section>
+
+    <section class="section location" id="ubicacion">
+      <div>
+        <p class="eyebrow dark">Ubicación</p>
+        <h2>En el centro de Selaya</h2>
+        <p>C/ Prosperidad, 3 · 39696 Selaya, Cantabria</p>
+        <a class="text-link" href="https://www.google.com/maps/search/?api=1&query=C%2FProsperidad%203%2C%20Selaya%2C%20Cantabria%2039696" target="_blank" rel="noopener">Abrir en Google Maps →</a>
+      </div>
+      <iframe title="Mapa de Apartamento Rural Pedrosillo" src="https://www.google.com/maps?q=C%2FProsperidad%203%2C%20Selaya%2C%20Cantabria%2039696&output=embed" loading="lazy"></iframe>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>Apartamento Rural Pedrosillo</strong>
+      <p>Selaya · Cantabria</p>
+    </div>
+    <div>
+      <a href="tel:+34661117740">661 117 740</a>
+      <a href="mailto:linares10santander@gmail.com">linares10santander@gmail.com</a>
+    </div>
+    <p class="copyright">© <span id="year"></span> Apartamento Rural Pedrosillo</p>
+  </footer>
+
+  <div class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Cerrar">×</button>
+    <img alt="">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
