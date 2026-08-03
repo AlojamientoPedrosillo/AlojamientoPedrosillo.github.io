@@ -174,3 +174,131 @@ footer p{margin:5px 0 0;opacity:.75}
   .calendar-day{font-size:.8rem;border-radius:7px}
   .calendar-weekdays,.availability-calendar{gap:4px}
 }
+
+
+/* Optimización específica para móviles */
+html,body{max-width:100%;overflow-x:hidden}
+body{-webkit-text-size-adjust:100%}
+iframe,img,svg{max-width:100%}
+
+@media(max-width:600px){
+  h1{font-size:clamp(2.25rem,11vw,3.2rem)}
+  h2{font-size:clamp(2.15rem,10vw,3rem)}
+  h3{font-size:1.45rem}
+
+  .nav{padding:16px 18px}
+  .brand{
+    font-size:1.05rem;
+    letter-spacing:.14em;
+    max-width:72vw;
+    white-space:nowrap;
+  }
+  .menu-btn{flex:0 0 auto;padding:4px}
+  .nav-links{
+    top:66px;
+    right:14px;
+    left:14px;
+    max-height:calc(100svh - 84px);
+    overflow-y:auto;
+    gap:16px;
+  }
+  .nav-links a{width:100%;padding:6px 0}
+  .nav-cta{text-align:center}
+
+  .hero{
+    min-height:100svh;
+    background-image:url("images/portada-mobile.jpg?v=1");
+    background-size:cover;
+    background-position:center top;
+  }
+  .hero-shade{
+    background:linear-gradient(180deg,rgba(20,24,22,.04),rgba(20,24,22,.02) 57%,rgba(20,24,22,.72));
+  }
+  .hero-actions{
+    width:100%;
+    padding:0 18px;
+    margin-bottom:78px;
+    gap:10px;
+    flex-direction:column;
+  }
+  .hero-actions .btn{width:100%;min-height:48px}
+  .scroll-cue{bottom:14px}
+
+  .section{padding:68px 20px}
+  .intro,.availability,.booking,.location{gap:38px}
+  .intro-copy>p:last-child{font-size:1rem}
+
+  .facts{grid-template-columns:1fr 1fr;gap:10px}
+  .facts article{padding:20px 14px;min-width:0}
+  .facts strong{font-size:2.45rem}
+  .facts span{font-size:.78rem;overflow-wrap:anywhere}
+
+  .section-heading{margin-bottom:30px}
+  .split-heading{display:block}
+  .split-heading .text-button{display:inline-block;margin-top:8px}
+
+  .services{grid-template-columns:1fr;gap:12px}
+  .services article{padding:22px}
+
+  .gallery-preview{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:none;
+    gap:8px;
+    border-radius:14px;
+  }
+  .gallery-preview button,
+  .gallery-main{
+    grid-column:auto;
+    grid-row:auto;
+    height:230px;
+  }
+  .gallery-preview button:nth-child(n+4){display:none}
+
+  .availability{padding-left:20px;padding-right:20px}
+  .calendar-legend{gap:14px;font-size:.82rem}
+  .calendar-card{
+    width:100%;
+    min-width:0;
+    padding:18px 10px;
+    border-radius:16px;
+  }
+  .calendar-toolbar{
+    grid-template-columns:36px minmax(0,1fr) 36px;
+    gap:6px;
+  }
+  .calendar-toolbar button{width:36px;height:36px}
+  .calendar-toolbar h3{
+    min-width:0;
+    font-size:1.38rem;
+    white-space:normal;
+  }
+  .calendar-weekdays,.availability-calendar{gap:3px}
+  .calendar-day{
+    font-size:.76rem;
+    border-radius:6px;
+    min-width:0;
+  }
+
+  .booking-form{padding:22px 16px;border-radius:17px}
+  .form-row{grid-template-columns:1fr;gap:0}
+  input,select,textarea{min-width:0;font-size:16px}
+  .platforms{flex-direction:column;gap:8px}
+  .booking-form .btn{white-space:normal;text-align:center}
+
+  .location iframe{min-height:320px;border-radius:14px}
+
+  footer{padding:38px 20px;gap:22px}
+  footer a{overflow-wrap:anywhere}
+
+  .gallery-modal{padding:56px 12px 44px}
+  .gallery-full{
+    width:100%;
+    height:auto;
+    max-height:76svh;
+    object-fit:contain;
+  }
+  .gallery-close{top:8px;right:14px}
+  .gallery-prev{left:2px}
+  .gallery-next{right:2px}
+}
