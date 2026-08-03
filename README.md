@@ -1,19 +1,20 @@
-# Apartamento Rural Pedrosillo
+# Apartamento Rural Pedrosillo — versión 2.0
 
-Primera versión de la web para GitHub Pages.
+Esta versión incluye:
 
-## Archivos
-- `index.html`: contenido de la página.
-- `styles.css`: diseño.
-- `script.js`: menú, galería y formulario de solicitud.
-- `images/`: fotografías optimizadas.
+- nueva paleta visual;
+- tipografías Cormorant Garamond y Manrope;
+- menú transparente que cambia al desplazarse;
+- portada con la nueva identidad;
+- animaciones suaves;
+- galería tipo Airbnb;
+- visor de fotografías;
+- formulario de solicitud;
+- mapa y datos de contacto.
 
-## Publicación rápida en GitHub
-1. Abre el repositorio `AlojamientoPedrosillo.github.io`.
-2. Pulsa **Add file > Upload files**.
-3. Arrastra todos los archivos y la carpeta `images`.
-4. Pulsa **Commit changes**.
-5. Espera unos minutos y abre `https://alojamientopedrosillo.github.io`.
+## Cómo actualizar GitHub
 
-## Nota sobre el formulario
-El formulario abre el programa de correo del visitante con los datos rellenados. La reserva no se confirma automáticamente.
+1. Descomprime el ZIP.
+2. Abre el repositorio `AlojamientoPedrosillo.github.io`.
+3. Sube y sustituye `index.html`, `styles.css`, `script.js` y la carpeta `images`.
+4. Confirma con `Commit changes`.
