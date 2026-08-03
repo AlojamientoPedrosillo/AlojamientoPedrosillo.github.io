@@ -122,21 +122,3 @@ document.addEventListener('keydown', event => {
   if (event.key === 'ArrowLeft') showImage(currentIndex - 1);
   if (event.key === 'ArrowRight') showImage(currentIndex + 1);
 });
-
-
-const hero = document.querySelector('.hero');
-let parallaxTicking = false;
-
-function updateHeroParallax() {
-  if (!hero) return;
-  const movement = Math.min(window.scrollY * 0.12, 55);
-  hero.style.setProperty('--parallax', `${movement}px`);
-  parallaxTicking = false;
-}
-
-window.addEventListener('scroll', () => {
-  if (!parallaxTicking) {
-    window.requestAnimationFrame(updateHeroParallax);
-    parallaxTicking = true;
-  }
-}, { passive: true });

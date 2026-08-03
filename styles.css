@@ -117,17 +117,10 @@ footer p{margin:5px 0 0;opacity:.75}
 
 
 /* Versión 2.1: detalles de marca y conversión */
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:-4%;
-  background:inherit;
-  background-position:center calc(50% + var(--parallax, 0px));
-  background-size:cover;
-  transform:scale(1.04);
-  z-index:0;
+.hero{
+  background:url("images/portada.jpg?v=4") center/cover no-repeat;
+  overflow:hidden;
 }
-.hero{background:none;overflow:hidden}
 .hero-shade{z-index:1}
 .nav,.hero-actions,.scroll-cue{z-index:2}
 
@@ -157,14 +150,15 @@ footer p{margin:5px 0 0;opacity:.75}
   border-color:rgba(85,107,93,.3);
 }
 .direct-benefits{
-  padding:18px 7vw;
-  background:#e8ebe7;
-  color:var(--green-dark);
+  padding:24px 7vw;
+  background:var(--green);
+  color:#fff;
   text-align:center;
-  border-top:1px solid rgba(85,107,93,.12);
-  border-bottom:1px solid rgba(85,107,93,.12);
+  border-top:1px solid rgba(255,255,255,.14);
+  border-bottom:1px solid rgba(255,255,255,.14);
 }
-.direct-benefits p{margin:0;font-size:.9rem;letter-spacing:.02em}
+.direct-benefits p{margin:0;font-size:1rem;letter-spacing:.01em}
+.direct-benefits strong{font-size:1.08rem}
 
 footer{
   grid-template-columns:1.35fr .8fr .6fr;
@@ -213,3 +207,5 @@ footer{
   .footer-brand{grid-column:auto}
   .whatsapp-float{width:52px;height:52px;right:16px;bottom:16px}
 }
+
+.location-note{font-size:.9rem;color:#6b706d;margin-top:-8px;margin-bottom:18px}
