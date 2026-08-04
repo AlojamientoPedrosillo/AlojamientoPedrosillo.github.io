@@ -787,3 +787,43 @@ input:focus,select:focus,textarea:focus{
     margin-bottom:40px;
   }
 }
+
+
+/* V10: frase trasladada desde la portada a la introducción */
+.hero-tagline{
+  display:none!important;
+}
+
+.intro-signature{
+  position:relative;
+  margin:30px 0 0;
+  padding:24px 0 0 34px;
+  max-width:620px;
+  color:var(--green-dark);
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(1.55rem,2.7vw,2.15rem);
+  font-style:italic;
+  line-height:1.35;
+}
+.intro-signature::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:29px;
+  width:20px;
+  height:1px;
+  background:var(--wood);
+}
+
+@media(max-width:600px){
+  .intro-signature{
+    margin-top:24px;
+    padding-top:18px;
+    padding-left:28px;
+    font-size:1.42rem;
+  }
+  .intro-signature::before{
+    top:25px;
+    width:17px;
+  }
+}
