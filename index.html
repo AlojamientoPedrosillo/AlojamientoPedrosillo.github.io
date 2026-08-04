@@ -10,20 +10,13 @@
   <meta property="og:title" content="Apartamento Rural Pedrosillo">
   <meta property="og:description" content="Apartamento para hasta 4 personas en Selaya, en pleno corazón de los Valles Pasiegos.">
   <meta property="og:url" content="https://alojamientopedrosillo.github.io/">
-  <meta property="og:image" content="https://alojamientopedrosillo.github.io/images/hero.webp">
+  <meta property="og:image" content="https://alojamientopedrosillo.github.io/images/portada.jpg">
   <meta name="theme-color" content="#556b5d">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=5">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BPQHE2VG5X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BPQHE2VG5X');
-</script>
+  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="stylesheet" href="legal.css?v=1">
 </head>
 <body>
   <header class="hero" id="inicio">
@@ -214,6 +207,11 @@
         </label>
         <label>Teléfono<input type="tel" id="guestphone"></label>
         <label>Mensaje<textarea id="message" rows="4" placeholder="Cuéntanos cualquier detalle que debamos saber"></textarea></label>
+        <label class="privacy-check">
+          <input type="checkbox" id="privacy-accepted" required>
+          <span>He leído y acepto la <a href="politica-privacidad.html" target="_blank" rel="noopener">Política de Privacidad</a>.</span>
+        </label>
+        <p class="privacy-summary">Responsable: Fernando Gutiérrez Gutiérrez. Finalidad: atender tu consulta o solicitud de reserva. Puedes ejercer tus derechos escribiendo a <a href="mailto:linares10santander@gmail.com">linares10santander@gmail.com</a>.</p>
         <button class="btn btn-primary full" type="submit">Solicitar disponibilidad</button>
         <a class="btn btn-whatsapp full" href="https://wa.me/34661117740?text=Hola%2C%20quiero%20consultar%20la%20disponibilidad%20del%20Apartamento%20Rural%20Pedrosillo." target="_blank" rel="noopener">Consultar por WhatsApp</a>
         <p class="form-disclaimer">La solicitud no confirma automáticamente la reserva.</p>
@@ -240,6 +238,11 @@
     <div>
       <a href="tel:+34661117740">661 117 740</a>
       <a href="mailto:linares10santander@gmail.com">linares10santander@gmail.com</a>
+      <div class="legal-links">
+        <a href="politica-privacidad.html">Política de privacidad</a>
+        <a href="politica-cookies.html">Política de cookies</a>
+        <button type="button" id="manage-cookies">Configurar cookies</button>
+      </div>
     </div>
     <p>© <span id="year"></span> Apartamento Rural Pedrosillo</p>
   </footer>
@@ -252,6 +255,22 @@
     <p class="gallery-counter"></p>
   </div>
 
+
+  <aside class="cookie-banner" id="cookie-banner" role="dialog" aria-modal="true" aria-labelledby="cookie-title" hidden>
+    <div class="cookie-banner__content">
+      <div>
+        <h2 id="cookie-title">Cookies analíticas</h2>
+        <p>Usamos Google Analytics para conocer de forma agregada cómo se utiliza la web. Puedes aceptar o rechazar estas cookies. Las cookies necesarias para el funcionamiento básico no requieren consentimiento.</p>
+        <a href="politica-cookies.html">Consultar la Política de Cookies</a>
+      </div>
+      <div class="cookie-banner__actions">
+        <button class="cookie-button cookie-button--secondary" id="reject-cookies" type="button">Rechazar</button>
+        <button class="cookie-button cookie-button--primary" id="accept-cookies" type="button">Aceptar</button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="privacy.js?v=1"></script>
   <script src="script.js"></script>
 </body>
 </html>

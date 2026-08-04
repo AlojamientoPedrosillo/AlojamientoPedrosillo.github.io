@@ -1,0 +1,161 @@
+
+/* Elementos legales de Apartamento Rural Pedrosillo */
+.privacy-check{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  margin:18px 0 8px;
+  font-weight:500;
+  line-height:1.5;
+}
+.privacy-check input{
+  width:18px;
+  height:18px;
+  min-height:0;
+  flex:0 0 18px;
+  margin:3px 0 0;
+  accent-color:#556b5d;
+}
+.privacy-check a,.privacy-summary a,.legal-links a,.legal-links button{
+  color:#556b5d;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+.privacy-summary{
+  font-size:.76rem;
+  line-height:1.55;
+  color:#707672;
+  margin:0 0 14px;
+}
+.legal-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 15px;
+  margin-top:14px;
+  font-size:.8rem;
+}
+.legal-links button{
+  border:0;
+  padding:0;
+  background:none;
+  font:inherit;
+  cursor:pointer;
+}
+footer .legal-links a,footer .legal-links button{color:#fff;opacity:.78}
+
+.cookie-banner{
+  position:fixed;
+  inset:auto 18px 18px;
+  z-index:100;
+  max-width:980px;
+  margin:0 auto;
+  padding:0;
+  color:#2e3133;
+}
+.cookie-banner[hidden]{display:none}
+.cookie-banner__content{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:28px;
+  align-items:center;
+  padding:23px 25px;
+  background:rgba(248,248,246,.98);
+  border:1px solid #d9d9d6;
+  border-radius:18px;
+  box-shadow:0 22px 65px rgba(26,31,28,.22);
+  backdrop-filter:blur(12px);
+}
+.cookie-banner h2{
+  margin:0 0 6px;
+  font-size:1.65rem;
+}
+.cookie-banner p{
+  margin:0 0 7px;
+  font-size:.9rem;
+  line-height:1.55;
+}
+.cookie-banner a{
+  color:#556b5d;
+  font-size:.82rem;
+  font-weight:700;
+}
+.cookie-banner__actions{
+  display:flex;
+  gap:9px;
+}
+.cookie-button{
+  min-width:108px;
+  border-radius:999px;
+  padding:12px 18px;
+  border:1px solid #556b5d;
+  font-weight:700;
+  cursor:pointer;
+}
+.cookie-button--primary{background:#556b5d;color:#fff}
+.cookie-button--secondary{background:transparent;color:#435447}
+
+.legal-page{
+  min-height:100vh;
+  background:#f8f8f6;
+  color:#3f4346;
+}
+.legal-header{
+  padding:22px 7vw;
+  background:#2e3133;
+  color:#fff;
+}
+.legal-header a{
+  color:#fff;
+  font-family:"Cormorant Garamond",serif;
+  font-size:1.35rem;
+  letter-spacing:.16em;
+}
+.legal-main{
+  width:min(860px,calc(100% - 40px));
+  margin:0 auto;
+  padding:70px 0 90px;
+}
+.legal-main h1{
+  margin-bottom:10px;
+  font-size:clamp(2.7rem,7vw,4.6rem);
+}
+.legal-main h2{
+  margin-top:44px;
+  font-size:clamp(1.8rem,4vw,2.5rem);
+}
+.legal-main h3{margin-top:28px}
+.legal-main p,.legal-main li{line-height:1.75}
+.legal-main .updated{
+  color:#727873;
+  font-size:.86rem;
+  margin-bottom:35px;
+}
+.legal-main .legal-card{
+  padding:24px;
+  background:#fff;
+  border:1px solid #e5e6e2;
+  border-radius:17px;
+}
+.legal-main a{color:#556b5d;font-weight:700}
+.legal-footer{
+  padding:30px 7vw;
+  background:#2e3133;
+  color:#fff;
+  text-align:center;
+}
+.legal-footer a{color:#fff;text-decoration:underline}
+
+@media(max-width:700px){
+  .cookie-banner{inset:auto 10px 10px}
+  .cookie-banner__content{
+    grid-template-columns:1fr;
+    gap:17px;
+    padding:19px;
+  }
+  .cookie-banner__actions{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+  .cookie-button{min-width:0}
+  .legal-main{padding-top:48px}
+}
