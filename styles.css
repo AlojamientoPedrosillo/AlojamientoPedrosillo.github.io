@@ -827,3 +827,7 @@ input:focus,select:focus,textarea:focus{
     width:17px;
   }
 }
+
+
+/* V11: eliminada firma, subtítulo actualizado */
+.intro-signature{display:none!important;}
