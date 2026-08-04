@@ -11,6 +11,7 @@ permissions:
 jobs:
   update-calendar:
     runs-on: ubuntu-latest
+
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
@@ -18,6 +19,7 @@ jobs:
       - name: Generar disponibilidad
         env:
           AIRBNB_ICAL_URL: ${{ secrets.AIRBNB_ICAL_URL }}
+          BOOKING_ICAL_URL: ${{ secrets.BOOKING_ICAL_URL }}
         run: python update_calendar.py
 
       - name: Guardar cambios
