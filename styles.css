@@ -831,3 +831,17 @@ input:focus,select:focus,textarea:focus{
 
 /* V11: eliminada firma, subtítulo actualizado */
 .intro-signature{display:none!important;}
+
+
+/* Tarjeta combinada Santillana del Mar + Comillas */
+.place-card__links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 18px;
+}
+@media(max-width:600px){
+  .place-card__links{
+    flex-direction:column;
+    gap:9px;
+  }
+}
