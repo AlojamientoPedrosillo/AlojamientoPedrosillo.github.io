@@ -762,3 +762,28 @@ input:focus,select:focus,textarea:focus{
     font-size:clamp(2.7rem,13vw,4.3rem);
   }
 }
+
+
+/* V9: orden de secciones y ajuste de la frase de portada */
+.hero-tagline{
+  bottom:138px;
+  max-width:560px;
+  padding:0 18px;
+  font-size:clamp(1.18rem,2.1vw,1.55rem);
+  line-height:1.35;
+}
+
+@media(max-width:600px){
+  .hero-tagline{
+    bottom:128px;
+    width:calc(100% - 48px);
+    max-width:430px;
+    padding:0;
+    font-size:1.08rem;
+    line-height:1.35;
+  }
+
+  .hero-actions{
+    margin-bottom:40px;
+  }
+}
