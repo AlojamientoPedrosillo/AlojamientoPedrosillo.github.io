@@ -63,19 +63,19 @@ Entiendo que esta solicitud no confirma la reserva y que recibiré respuesta por
 });
 
 const galleryImages = [
-  ['images/salon-1.jpg', 'Salón'],
+  ['images/salon-1.jpg', 'Salón y zona de juegos'],
   ['images/comedor.jpg', 'Comedor'],
-  ['images/dormitorio-1.jpg', 'Primer dormitorio'],
+  ['images/dormitorio1-1.jpg', 'Primer dormitorio'],
+  ['images/dormitorio1-2.jpg', 'Primer dormitorio'],
   ['images/cocina-1.jpg', 'Cocina'],
   ['images/vistas-1.jpg', 'Entorno'],
   ['images/salon-2.jpg', 'Salón'],
   ['images/salon-3.jpg', 'Salón y comedor'],
-  ['images/salon-comedor.jpg', 'Zona de día'],
-  ['images/dormitorio-2.jpg', 'Segundo dormitorio'],
+  ['images/dormitorio2.jpg', 'Segundo dormitorio'],
   ['images/cocina-2.jpg', 'Cocina'],
   ['images/bano.jpg', 'Baño'],
   ['images/entrada.jpg', 'Entrada'],
-  ['images/vistas-2.jpg', 'Entorno de Selaya']
+  ['images/garaje.jpg', 'Garaje privado'],
 ];
 
 const modal = document.querySelector('.gallery-modal');
