@@ -878,3 +878,28 @@ input:focus,select:focus,textarea:focus{
         font-size:.9rem;
     }
 }
+
+
+
+/* V12: Banner de cookies más compacto */
+.cookie-banner__content{
+  max-width:560px;
+  padding:18px 22px;
+  border-radius:16px;
+}
+
+.cookie-banner h2{
+  font-size:1.1rem;
+  margin-bottom:8px;
+}
+
+.cookie-banner p{
+  font-size:.9rem;
+  line-height:1.45;
+  margin-bottom:10px;
+}
+
+.cookie-button{
+  padding:10px 16px;
+  font-size:.9rem;
+}
