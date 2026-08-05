@@ -903,3 +903,9 @@ input:focus,select:focus,textarea:focus{
   padding:10px 16px;
   font-size:.9rem;
 }
+.tourism-license {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-style: italic;
+}
