@@ -845,3 +845,9 @@ input:focus,select:focus,textarea:focus{
     gap:9px;
   }
 }
+/* Mejorar contraste del título de entorno */
+.surroundings-teaser__content h2,
+.environment-hero__content h1 {
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
+}
